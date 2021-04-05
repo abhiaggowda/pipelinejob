@@ -1,0 +1,14 @@
+pipeline {
+        agent any
+        stages {
+        stage("Build") {
+        steps {
+        sh '''
+        #!/bin/bash
+        git clone https://github.com/abhiaggowda/cbuild.git
+        cd cbuild
+        make '''
+        }
+        }
+}
+}
